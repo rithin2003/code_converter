@@ -1,28 +1,22 @@
-Code Logic:
+Pascal Code Logic:
 
-The program performs a data operation based on user input and updates a database with the operation details.
+* `program HelloWorld;`: This line declares the beginning of the program named "HelloWorld".
+* `begin`: Starts the execution block of the program.
+* `Writeln('Hello, World!');`: This statement prints the string "Hello, World!" to the console.
+* `end.`: Marks the end of the program.
 
-Approach:
+Approach to Convert to Python:
 
-1. Create a base abstract class: `TDataOperation` declares a virtual function `PerformOperation` that serves as a template for specific operations.
-2. Define concrete operation classes: `TAdditionOperation` and `TSubtractionOperation` inherit from `TDataOperation` and provide implementations for the `PerformOperation` function, adding 10 and subtracting 5, respectively.
-3. Create a database updater class: `TDatabaseUpdater` contains a `UpdateDatabase` procedure to handle database updates.
-4. Input and validate user input: The program prompts the user for operation type ('A' for Addition or 'S' for Subtraction) and number.
-5. Instantiate a specific operation class: Based on the user's operation type, an instance of either `TAdditionOperation` or `TSubtractionOperation` is created.
-6. Perform the operation: The `PerformOperation` function of the instantiated operation is invoked to perform the calculation.
-7. Output the result: The program displays the calculated result to the user.
-8. Update the database: The `UpdateDatabase` procedure of `TDatabaseUpdater` is called to record the operation details in the database.
-9. Clean up: The program deallocates the created operation object.
+To convert this Pascal code to Python, you can follow these steps:
 
-Python Conversion Approach:
+1. Replace the `program` keyword with `def` to define a function named `HelloWorld`.
+2. Replace the `begin` and `end` keywords with indentation to mark the beginning and end of the function block.
+3. Convert the `Writeln` statement to `print`. In Pascal, `Writeln` prints a string followed by a newline character. In Python, `print` does the same, but it can be written without the `ln` suffix.
 
-To convert this code to Python, you would:
+Python Code:
 
-- Define abstract base class: Create a base class `DataOperation` with an abstract method `perform_operation`.
-- Implement concrete operations: Define classes `AdditionOperation` and `SubtractionOperation` that inherit from `DataOperation` and implement the `perform_operation` method.
-- Create database updater: Define a class `DatabaseUpdater` with an `update_database` method to handle database updates.
-- Input and validate user input: Prompt the user for operation type and number and validate them.
-- Instantiate specific operation object: Based on the user's input, create an instance of either `AdditionOperation` or `SubtractionOperation`.
-- Perform the operation: Invoke the `perform_operation` method of the operation object.
-- Output the result: Display the calculated result.
-- Update the database: Call the `update_database` method of `DatabaseUpdater` with the operation details.
+
+python
+def HelloWorld():
+    print('Hello, World!')
+
